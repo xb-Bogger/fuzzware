@@ -9,9 +9,9 @@ FLAGS="-DCMAKE_BUILD_TYPE=Release"
 UNICORN_ARCH="${*}"
 
 if [ -z "${UNICORN_ARCH}" ]; then
-    cmake "${FLAGS}" ..
+    cmake "${FLAGS}" .
 else
-    cmake "${FLAGS}" "-DUNICORN_ARCH=${UNICORN_ARCH}" ..
+    cmake "${FLAGS}" "-DUNICORN_ARCH=${UNICORN_ARCH}" .
 fi
 
 make -j8

@@ -17,38 +17,38 @@ ENV_VARS = LD_LIBRARY_PATH=../ DYLD_LIBRARY_PATH=../ LIBUNICORN_PATH=$(TRAVIS_BU
 endif
 
 
-.PHONY: build install python c clean check test
+.PHONY: build install python3 c clean check test
 
 build:
-	$(MAKE) -C python gen_const
+	$(MAKE) -C python3 gen_const
 	$(MAKE) -C go gen_const
 	$(MAKE) -C java gen_const
 	$(MAKE) -C ruby gen_const
-	python const_generator.py dotnet
-	python const_generator.py pascal
+	python3 const_generator.py dotnet
+	python3 const_generator.py pascal
 
 install: build
-	$(MAKE) -C python install
+	$(MAKE) -C python3 install
 	$(MAKE) -C java install
 
 test: $(SAMPLE:%=%.py.test)
 
 c:
 	$(MAKE) -C ../samples
-python:
-	$(MAKE) -C python
+python3:
+	$(MAKE) -C python3
 %.c.txt: c
 	$(ENV_VARS) ../samples/$(@:%.c.txt=%) > $@
-%.py.txt: python
-	$(ENV_VARS) python python/$(@:%.txt=%) > $@
+%.py.txt: python3
+	$(ENV_VARS) python3 python3/$(@:%.txt=%) > $@
 
 %.py.test: %.c.txt %.py.txt
 	$(DIFF) -u $(@:%.py.test=%.c.txt) $(@:%.py.test=%.py.txt)
 
 clean:
 #	rm -rf *.txt
-	$(MAKE) -C python clean
+	$(MAKE) -C python3 clean
 	$(MAKE) -C java clean
 
 check:
-	make -C python check
+	make -C python3 check
