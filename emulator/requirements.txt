@@ -1,5 +1,5 @@
 setuptools
-cython
+cython==0.29.36
 PyYAML>=5.3
 intelhex
 archinfo==8.19.10.30
@@ -8,3 +8,4 @@ capstone
 IPython
 ipdb
 monkeyhex
+pycapnp==v1.0.0b1

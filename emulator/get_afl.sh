@@ -35,6 +35,6 @@ if [ ! -e afl ]; then
 fi
 
 if [ ! -e AFLplusplus ]; then
-    git clone https://github.com/AFLplusplus/AFLplusplus
+    git clone https://github.com/AFLplusplus/AFLplusplus.git
     git -C AFLplusplus checkout 3.14c
 fi

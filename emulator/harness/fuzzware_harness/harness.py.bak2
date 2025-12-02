@@ -21,7 +21,7 @@ from .util import (bytes2int, load_config_deep, parse_address_value,
 # logging.basicConfig(stream=sys.stdout, level=logging.WARNING) #CBY
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG) #CBY
 logger = logging.getLogger("emulator")
-# start
+# CBY-start
 instlist = open('instlist','w',encoding='utf8')
 def unicorn_trace_code(uc, address, size=0, user_data=None):
     from unicorn.arm_const import (
@@ -41,7 +41,7 @@ def unicorn_trace_code(uc, address, size=0, user_data=None):
         reg_vals.append(f"{name}:{hex(val)}")
     reg_str = ';'.join(reg_vals)
     print(f'Hook at {hex(address)} {reg_str}', file=instlist, flush=True)
-# end
+# CBY-end
 def unicorn_trace_syms(uc, address, size=0, user_data=None):
     if address in uc.syms_by_addr:
         print(f"Calling function: {uc.syms_by_addr[address]}", flush=True)

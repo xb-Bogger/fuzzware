@@ -114,7 +114,6 @@ def init_tracing(trace_path, uc, config, mmio_ranges,data,action):
     trace_file = open(trace_path, 'w+b')
 
     # add mmio memory hooks
-    # add data-event
     if data == 1:
         for start, end in mmio_ranges:
             logger.info("bintrace: Tracing mmio accesses from 0x{:08x} to 0x{:08x}".format(start, end))
@@ -133,7 +132,6 @@ def init_tracing(trace_path, uc, config, mmio_ranges,data,action):
         # add crash hook
     uc.hook_add(UC_HOOK_MEM_WRITE_INVALID | UC_HOOK_MEM_READ_INVALID | UC_HOOK_MEM_FETCH_INVALID , hook_mem_invalid_access)
     uc.hook_add(UC_HOOK_INSN_INVALID, hook_exe_invalid_access)
-    # add action-event
     if action == 1:
         # add instruction hook
         uc.hook_add(UC_HOOK_CODE, insn_hook_code,None,1,0)

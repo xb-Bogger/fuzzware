@@ -81,4 +81,3 @@ For additional descriptions of different steps of the workflow, also check out
 - How to [optimize the config](docs/target_configuration.md).
 - How to [analyze coverage progress](docs/coverage_analysis.md).
 - How to [analyze crashes](docs/crash_analysis.md).
-
