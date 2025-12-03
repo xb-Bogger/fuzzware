@@ -10,7 +10,7 @@ import capnp as _capnp
 this_dir = _os.path.dirname(__file__)
 
 # modify your path!
-bintrace_capnp = _capnp.load('bintrace.capnp', imports=[this_dir])
+bintrace_capnp = _capnp.load('/home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/harness/fuzzware_harness/tracing/bintrace.capnp', imports=[this_dir])
 
 TraceEvent = bintrace_capnp.TraceEvent
 Crash = bintrace_capnp.Crash
