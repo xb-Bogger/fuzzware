@@ -8,8 +8,13 @@ This is a fixed version for my own project.
 
 For a local setup, your system will have to have a list of local tooling installed to handle building unicorn, setting up virtual environments and finally running different pipeline components. You can see how to set those dependencies up in the [Docker file](dockerfile). Without installing all the dependencies first, different steps of the installation process will complain and you will be able to install them one by one.
 
-To install locally:
+To install locally, python == 3.10 is best:
 ```
+sudo apt update
+sudo apt install -y redis-server tmux python3-pip virtualenv virtualenvwrapper gcc-arm-none-eabi
+pip3 install virtualenvwrapper
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
 ./install_local.sh
 ```
 
