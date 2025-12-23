@@ -11,7 +11,7 @@ For a local setup, your system will have to have a list of local tooling install
 To install locally, python == 3.10 is best:
 ```
 sudo apt update
-sudo apt install -y redis-server tmux python3-pip virtualenv virtualenvwrapper gcc-arm-none-eabi automake clang unzip
+sudo apt install -y redis-server tmux python3-pip virtualenv virtualenvwrapper gcc-arm-none-eabi automake clang unzip cmake
 pip3 install virtualenvwrapper
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
