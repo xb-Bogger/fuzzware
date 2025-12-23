@@ -1,6 +1,6 @@
 fuzzer/log.o: \
- /home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.c \
- /home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/arm.h \
- /home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.h
-/home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/arm.h:
-/home/user/Desktop/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.h:
+ /web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.c \
+ /web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/arm.h \
+ /web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.h
+/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/arm.h:
+/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/fuzzer/log.h:

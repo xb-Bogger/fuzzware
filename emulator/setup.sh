@@ -16,8 +16,15 @@ echo "[*] Building native harness module"
 make -C harness/fuzzware_harness/native clean all || exit 1
 
 echo "[*] Installing harness"
-pip3 install -U cython || exit 1
+pip3 install -U cython==0.29.37 || exit 1
+pip install -U pycapnp==1.2.1 --no-build-isolation
 pip3 install -U -r requirements.txt || exit 1
 
 pushd harness; pip3 install -e . || { popd; exit 1; }; popd
+
+echo "[*] Installing fuzzware_harness"
+pip3 install -U -r archinfo ipdb || exit 1
+pip3 install -U -e unicorn/fuzzware-unicorn/bindings/python || exit 1
+pip3 install -U -e harness || exit 1
+
 exit 0
