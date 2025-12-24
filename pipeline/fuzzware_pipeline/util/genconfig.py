@@ -430,6 +430,14 @@ def gen_configs(config_basedir, config_map, binary_path, elf_path, ivt_offset=0,
 
 NUM_CRASH_MAPPED_AROUND_PAGES = 5
 def add_region_for_crashing_addr(config_map, crash_addr):
+    # 1. check out if crash addr is already mapped
+    for name, reg in config_map['memory_map'].items():
+        start = reg['base_addr']
+        end = start + reg['size']
+        if start <= crash_addr < end:
+            logger.warning(f"Crash address 0x{crash_addr:x} is already inside region '{name}'. No need to add.")
+            return
+    # 2. add region around crash addr
     page_start = crash_addr & ~PAGE_MASK
     mapping_distance = NUM_CRASH_MAPPED_AROUND_PAGES * PAGE_SIZE
     new_region_entry = {

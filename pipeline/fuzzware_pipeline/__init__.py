@@ -159,8 +159,8 @@ def do_genconfig(args, leftover_args):
         else os.path.join(target_dir, nc.DEFAULT_FILENAME_SYMS_YML)
     )
     if os.path.exists(outpath):
-        logger.error(f"Result path '{outpath}' already exists")
-        exit(1)
+        logger.warning(f"Result path '{outpath}' already exists")
+        # exit(1)
 
     #calc bin path if original file was elf
     if is_elf(binary_path):
