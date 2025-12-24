@@ -23,7 +23,7 @@ pip3 install -U -r requirements.txt || exit 1
 pushd harness; pip3 install -e . || { popd; exit 1; }; popd
 
 echo "[*] Installing fuzzware_harness"
-pip3 install -U -r archinfo ipdb || exit 1
+pip3 install -U archinfo ipdb || exit 1
 pip3 install -U -e unicorn/fuzzware-unicorn/bindings/python || exit 1
 pip3 install -U -e harness || exit 1
 

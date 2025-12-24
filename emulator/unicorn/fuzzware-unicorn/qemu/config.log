@@ -1,4 +1,4 @@
-# QEMU configure log Tue Dec 23 02:56:58 UTC 2025
+# QEMU configure log 2025年 12月 24日 星期三 15:10:59 CST
 # Configured with: './configure' '--cc=cc' '--extra-cflags=-DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden' '--target-list=arm-softmmu, armeb-softmmu,' '--disable-debug-info'
 #
 cc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -c -o config-temp/qemu-conf.o config-temp/qemu-conf.c
@@ -46,19 +46,11 @@ config-temp/qemu-conf.c:1:10: fatal error: sys/endian.h: No such file or directo
       |          ^~~~~~~~~~~~~~
 compilation terminated.
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3
-/usr/bin/ld: /tmp/cc3AUrwp.o: in function `main':
-/web/backend/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/config-temp/qemu-conf.c:2: undefined reference to `sin'
+/usr/bin/ld: /tmp/ccrq0O0l.o: in function `main':
+/home/user/Desktop/web/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/config-temp/qemu-conf.c:2: undefined reference to `sin'
 collect2: error: ld returned 1 exit status
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3 -lm
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3
-config-temp/qemu-conf.c: In function ‘main’:
-config-temp/qemu-conf.c:5:10: warning: argument 2 null where non-null expected [-Wnonnull]
-    5 |   return clock_gettime(CLOCK_REALTIME, NULL);
-      |          ^~~~~~~~~~~~~
-In file included from config-temp/qemu-conf.c:2:
-/usr/include/time.h:288:12: note: in a call to function ‘clock_gettime’ declared ‘nonnull’
-  288 | extern int clock_gettime (clockid_t __clock_id, struct timespec *__tp)
-      |            ^~~~~~~~~~~~~
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3
 config-temp/qemu-conf.c:1:10: fatal error: valgrind/valgrind.h: No such file or directory
     1 | #include <valgrind/valgrind.h>
