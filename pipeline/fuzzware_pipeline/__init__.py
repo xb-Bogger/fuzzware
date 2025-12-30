@@ -1046,7 +1046,7 @@ def main():
 
     # Genconfig command-line arguments
     parser_genconfig.add_argument('binary', help="The binary file for which to generate the configuration. ELF Files and other formats will be unpacked to binary form if such file does not yet exist.")
-    parser_genconfig.add_argument('-o', "--outpath", default=None, help="(Optional) Generated config path. By default, a config.yml file is generated in the directory of the target binary.")
+    parser_genconfig.add_argument('-o', "--outpath", default="config.yml", help="(Optional) Generated config path. By default, a config.yml file is generated in the directory of the target binary.")
     parser_genconfig.add_argument('--base-config', default=None, help="(Optional) A base configuration file to use. Memory regions within this config are treated as definitive. If a memory region is included with a 'file' entry which would match the binary (most commonly, this would be '*.bin')")
     parser_genconfig.add_argument('--dump-syms', default=False, action="store_true", help=f"(Optional) Instead of generating a full configuration, just dump symbols to 'outpath' instead. Defaults to false, with symbol output path of '{nc.DEFAULT_FILENAME_SYMS_YML}'.")
     parser_genconfig.add_argument('--dyn-base-inputs', default=default_base_input_dir(), help="(Optional) Base inputs to use for initial memory region re-configuration.")
