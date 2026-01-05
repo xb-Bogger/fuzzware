@@ -211,6 +211,10 @@ def add_missing_regions(existing_mem_config, add_entries):
 
             # Do we also need to extend other region forward?
             if other_start <= start <= other_end < end:
+                # skip .text section
+                if "file" in other_entry:
+                    logger.info(f"Skipping backward extension for file-backed region {other_rname}. Keeping new region separate.")
+                    continue 
                 # If we need to extend the other region forward, make sure not to clash with the region following that
                 if i+1 < len(sorted_other_regions):
                     next_region_name = sorted_other_regions[i+1]

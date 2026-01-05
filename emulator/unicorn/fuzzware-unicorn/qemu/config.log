@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # QEMU configure log Mon Jan  5 13:11:28 CST 2026
+=======
+# QEMU configure log Tue Dec  2 09:29:11 PM CST 2025
+>>>>>>> 68332d5 (fix genconfig)
 # Configured with: './configure' '--cc=cc' '--extra-cflags=-DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden' '--target-list=arm-softmmu, armeb-softmmu,' '--disable-debug-info'
 #
 cc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -c -o config-temp/qemu-conf.o config-temp/qemu-conf.c
@@ -50,8 +54,13 @@ config-temp/qemu-conf.c:1:10: fatal error: sys/endian.h: No such file or directo
       |          ^~~~~~~~~~~~~~
 compilation terminated.
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3
+<<<<<<< HEAD
 /usr/bin/ld: /tmp/ccGqTkyM.o: in function `main':
 /root/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/config-temp/qemu-conf.c:2: undefined reference to `sin'
+=======
+/usr/bin/ld: /tmp/cc7wdlUb.o: in function `main':
+/home/xubo/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu/config-temp/qemu-conf.c:2: undefined reference to `sin'
+>>>>>>> 68332d5 (fix genconfig)
 collect2: error: ld returned 1 exit status
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3 -lm
 cc -fPIE -DPIE -m64 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Wstrict-prototypes -Wredundant-decls -Wall -Wundef -Wwrite-strings -Wmissing-prototypes -fno-strict-aliasing -fno-common -DUNICORN_HAS_ARM -DUNICORN_HAS_ARMEB -fPIC -O3 -g -DNDEBUG -march=native -fvisibility=hidden -Wendif-labels -Wmissing-include-dirs -Wempty-body -Wnested-externs -Wformat-security -Wformat-y2k -Winit-self -Wignored-qualifiers -Wold-style-declaration -Wold-style-definition -Wtype-limits -fstack-protector-strong -o config-temp/qemu-conf.exe config-temp/qemu-conf.c -Wl,-z,relro -Wl,-z,now -pie -m64 -O3

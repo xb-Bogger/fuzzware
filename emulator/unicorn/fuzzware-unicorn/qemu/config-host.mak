@@ -7,7 +7,11 @@ ARCH=x86_64
 STRIP=strip
 CONFIG_POSIX=y
 CONFIG_LINUX=y
+<<<<<<< HEAD
 SRC_PATH=/root/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu
+=======
+SRC_PATH=/home/xubo/fuzzers/fuzzware/emulator/unicorn/fuzzware-unicorn/qemu
+>>>>>>> 68332d5 (fix genconfig)
 TARGET_DIRS=arm-softmmu  armeb-softmmu 
 CONFIG_BYTESWAP_H=y
 CONFIG_CPUID_H=y
