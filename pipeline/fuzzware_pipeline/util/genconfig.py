@@ -427,6 +427,19 @@ def gen_configs(config_basedir, config_map, binary_path, elf_path, ivt_offset=0,
         config_map['memory_map']['ram']['size'] = 0x400000
         #add is_entry = True to text
         config_map['memory_map']['text']['is_entry'] = True
+    
+    # --- add rules to Escape Peripheral ---
+    if 'custom_io' not in config_map:
+        config_map['custom_io'] = {}
+        for name, region in config_map.get('memory_map', {}).items():
+            if 'mmio' in name.lower():
+                base = region['base_addr']
+                config_map['custom_io'][base] = [{
+                    "addr": base,
+                    "size": region['size'],
+                    "handler": "set_to_read"
+                }]
+    # --------------------------------
 
 NUM_CRASH_MAPPED_AROUND_PAGES = 5
 def add_region_for_crashing_addr(config_map, crash_addr):
